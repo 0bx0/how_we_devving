@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> How we devving? :> </title>
-        <script></script>
-        <link rel="stylesheet" href="../static/styles.css">
-    </head>
+<head>
+    <title>How we devvin? :></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="welcome-wrapper">
+        <h1 class="Welcome">HOW WE DEVVIN'?</h1>
+        <h2 class="sub">You code, Kitty watches</h2>
+        
+        <img src="{{ url_for('static', filename='cat.png') }}" alt="watching cat" class="cat">
+        <a class="button" href="/config_page">LET'S START</a>
+    </div>
 
-    <body>
-        <h1>How are we devving today?</h1>
-        <button> I am a useless button! </button>
-    </body>
+    <div class="leaves" styles></div>
+</body>
 </html>

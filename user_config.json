@@ -1,0 +1,35 @@
+{
+    "timer": {
+        "work-time": 30,
+        "break-time": 5,
+        "long-break-time": 15,
+        "kitty-style": "Carrots"
+    },
+    "tasks": [
+            "Coding:2h",
+            "Reading:1h",
+            "Exercise:30m",
+            "Cooking:1h"
+    ],
+    "rests": [
+        "Coffee Break:15m",
+        "Lunch Break:1h",
+        "Evening Walk:30m"
+    ],
+    "quotes":{
+        "kitty-quotes": [
+            "meow! (Drink some water!)",
+            "purr... (Take a deep breath!)",
+            "hiss! (Time for a break!)",
+            "mew! (Keep going, you can do it!)",
+            "mraw! (Stay pawsitive!)"
+        ],
+
+        "motivational-quotes": [
+            "Believe in yourself!",
+            "Stay focused and never give up.",
+            "Success is the sum of small efforts, repeated day in and day out.",
+            "Dream big, work hard, stay humble."
+        ]
+    }
+}

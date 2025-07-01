@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Timer!</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <!-- Material Symbols Rounded (one import only, covers all icons) -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:FILL@1&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main class="container">
+        <div class="left-side">
+            <div class="timer-display">
+                <span id="timer">25:00</span>
+            </div>
+            <div class="time-left">
+                <span id="time-left">Time Left: 25:00</span>
+            </div>
+        </div>
+        
+        <div class="settings-icon material-symbols-rounded">more_horiz</div>
+        <div class="date-time">
+            <div class="date">
+                <span id="current-date">October 1, 2023</span>
+            </div>
+            <div class="time">
+                <span id="current-time">12:00 PM</span>
+            </div>  
+        </div>
+        
+
+        <div class="right-side">
+            <div class="cat-card">
+                <h2 class="motivational-quotes">You're doing great!</h2>
+                <div class="to-do-card">
+                    <div class="blank" style="padding: 1rem;"></div>
+                    <div class="task-navigation">
+                        <div class="icon"><span class="material-symbols-rounded" style="font-size: 2rem;">keyboard_arrow_left</span></div>
+                        <div class="task-name">Task 1</div>
+                        <div class="icon"><span class="material-symbols-rounded" style="font-size: 2rem;">keyboard_arrow_right</span></div>
+                    </div>
+
+                    <div class="other-icons">
+                        <div class="icon"><span class="material-symbols-rounded">joystick</span></div>
+                        <div class="icon"><span id="pause-icon" class="material-symbols-rounded">pause</span></div>
+                        <div class="icon"><span class="material-symbols-rounded">settings</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='timer.js') }}"></script>
+</body>
+</html>

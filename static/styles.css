@@ -1,17 +1,320 @@
-/***
-Background: #e5e5dc
-Primary: #355e3b 
-Accent: #a3b18a
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
-Text: #2e2e2e
-Highlight: #588157
-***/
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Share+Tech+Mono&display=swap');
-* _{}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Figtree', sans-serif;
+}
 
 body {
     background-color: #e5e5dc;
     color: #2e2e2e;
-    font-family: "Figtree", sans-serif;
+    overflow-x: hidden;
 }
 
+.welcome-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    gap: 1.2rem;
+}
+
+.welcome-wrapper .Welcome {
+    font-size: 2.8rem;
+    font-weight: 800;
+}
+
+.welcome-wrapper .sub {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #6f6f6f;
+    font-style: italic;
+}
+
+.welcome-wrapper .cat {
+    width: 200px;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    margin-left: 3em;
+    margin-bottom: -1.3em;
+}
+
+.button {
+    background-color: #a3b18a;
+    color: #fff;
+    border: 2px solid #303030;
+    padding: 10px 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    box-shadow: 1px 1px 0 #6f6e6e;
+    display: inline-block;
+}
+
+.button:hover {
+    color: #f1f1f1;
+    background-color: #757c69;
+    box-shadow: 3px 3px 0 #222;
+}
+
+.leaves {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    background-image: url("/static/ground.png");
+    background-repeat: repeat-x;
+    background-size: 200px 250px;
+    background-position: bottom;
+    image-rendering: pixelated;
+    z-index: 10;
+}
+
+
+
+/*======================Config page========================*/
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    height: 100vh;
+    width: 100%;
+}
+
+.summon-timer-box {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.box {
+    background-color: #C7D1B4;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+.box h2 {
+    font-size: 1rem;
+    color: #5a5a5a;
+    margin-bottom: 30px;
+}
+
+.link-applications-box {
+    background-color: #C7D1B4;
+    height: 100%;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    border-left: 3px dashed #999;
+    border-right: 3px dashed #999;
+}
+
+.link-applications-box h1 {
+    font-size: 3rem;
+}
+
+.link-applications-box h2 {
+    margin-top: -2rem;
+}
+
+.config-box {
+    width: 600px;
+    padding: 30px;
+    background-color: #A3B18A;
+    color: #DDEAC7;
+    overflow-y: auto;
+}
+
+.Config-heading {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.code-style-block {
+    font-family: 'Fira Mono', monospace;
+    margin-top: 10px;
+}
+
+.config-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #DDEAC7;
+}
+
+.code-style-block * {
+    font-family: 'Fira Mono', monospace;
+    font-size: 1.1rem;
+}
+
+.config-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 8px;
+}
+
+.config-line input[type="number"],
+.config-line input[type="text"] {
+    padding: 2px 5px;
+    font-family: 'Fira Mono', monospace;
+    background-color: #B8C0A8;
+    color: #DDEAC7;
+    border: none;
+    font-size: 1rem;
+    width: 80px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.config-line input:focus {
+    border-color: #588157;
+}
+
+.unit-label {
+    font-size: 0.9rem;
+    color: #DDEAC7;
+    margin-left: 6px;
+    opacity: 0.8;
+}
+
+.config-title a{
+    color: #DDEAC7;
+    font-weight: bold;
+}
+
+.confirm-zone {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    width: 15%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button {
+    background-color: #DDEAC7;
+    color: #121212;
+}
+
+/*Timer ui*/
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+.cat-card {
+    color: #986B42;
+    background-color: #FFB36C66;
+    width: 37rem;
+    border-radius: 20px;    
+    padding: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.motivational-quotes {
+    text-align: center;
+    width: fit-content;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+}
+.to-do-card {
+    width: 100%;
+    background-color: #F2E3D2;
+    color: #61482A;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.task-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #61482A;
+}
+
+.task-navigation {
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.task-navigation .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+.task-navigation, .other-icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.other-icons {
+    width: 35%;
+}
+
+.material-symbols-rounded {
+    font-family: 'Material Symbols Rounded', sans-serif;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #61482A;
+    transition: color 0.3s ease;
+}
+
+.settings-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+.date-time {
+    color: #61482A;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+#pause-icon{
+    font-size: 2.3rem;
+}
